@@ -1,0 +1,13 @@
+<h3>Sign In</h3>
+<form class="form" (ngSubmit)="login()">
+    <div>
+        <label>Username</label>
+        <input [(ngModel)]="user.username" name="username" type="text" required>
+    </div>
+    <div>
+        <label>Password</label>
+        <input [(ngModel)]="user.password" name="password" type="password" required>
+    </div>
+    <input type="submit" name="Login">
+    <a class="register" href="/register">Don't have an account?</a>
+</form>

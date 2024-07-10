@@ -1,0 +1,31 @@
+<div>
+    <a class="add" routerLink="/bookmarks/new">Add Item</a>
+    <div class="tableDiv">
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Url</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Expiary Date</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let bookmark of bookmarks">
+                    <td>{{bookmark.name}}</td>
+                    <td>{{bookmark.url}}</td>
+                    <td>{{bookmark.description}}</td>
+                    <td>{{bookmark.status}}</td>
+                    <td>{{bookmark.date}}</td>
+                    <td>
+                        <a class="edit" routerLink="/bookmarks/{{bookmark.id}}">Edit</a>
+                        <button class="delete" (click)="delete(bookmark.id!)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<h3>Add Bookmarks</h3>
+<form class="form" (ngSubmit)="save()">
+    <div>
+        <label>Name</label>
+        <input [(ngModel)]="bookmark.name" name="name" type="text" required>
+    </div>
+    <div>
+        <label>Url</label>
+        <input [(ngModel)]="bookmark.url" name="url" type="text" required>
+    </div>
+    <div>
+        <label>Description</label>
+        <input [(ngModel)]="bookmark.description" name="description" type="text" required>
+    </div>
+    <div>
+        <label>Status</label>
+        <input [(ngModel)]="bookmark.status" name="status" type="text" required>
+    </div>
+    <div>
+        <label>Expiary Date</label>
+        <input [(ngModel)]="bookmark.date" name="date" type="text" required>
+    </div>
+    <input type="submit" name="Submit">
+    <button (click)="cancel()">Cancel</button>
+</form>
+
